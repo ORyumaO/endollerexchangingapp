@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: content: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function henkan(){
+             var doller = document.getElementById("yen").value;
+             document.getElementById("doller").value = doller/110;
+             var euro = document.getElementById("yen").value;
+             document.getElementById("euro").value = euro/130;
+             var pond = document.getElementById("yen").value;
+             document.getElementById("pond").value = pond/150;
+             var fran = document.getElementById("yen").value;
+             document.getElementById("fran").value = fran/115;
+             var audoller = document.getElementById("yen").value;
+             document.getElementById("audoller").value = audoller/90;
+             var newdoller = document.getElementById("yen").value;
+             document.getElementById("newdoller").value = newdoller/80;
+             }
+    
+    </script>
+</head>
+<body>
+<h2>☆円をいろいろ変換☆</h2>
+<p>日<font color="red">本</font>円</p>
+<input type="text" id="yen" value="数字を入力してください。" pattern="\d*">
+
+<br /><br />
+
+<input type="button" id="button" onclick="henkan()" value="変換">
+
+<br /><br />
+
+<p>米ドル</p>
+<input type="text" id="doller" disabled="disabled"> ドル
+<br /><br />
+<p>欧ユーロ</p>
+<input type="text" id="euro" disabled="disabled"> ユーロ
+<br /><br />
+<p>英ポンド</p>
+<input type="text" id="pond" disabled="disabled"> ポンド
+<br /><br />
+<p>スイスフラン</p>
+<input type="text" id="fran" disabled="disabled"> フラン
+<br /><br />
+<p>豪ドル</p>
+<input type="text" id="audoller" disabled="disabled"> ドル
+<br /><br />
+<p>新ドル</p>
+<input type="text" id="newdoller" disabled="disabled"> ドル
+
+
+<script>
+//日本円入力
+            var yen = document.getElementById("yen");
+// 入力フォーカスを得たときの処理
+            yen.onfocus = function()
+        {
+            if( this.value == this.defaultValue )
+        {
+            this.value = '';
+            this.style.color = '';
+        }
+    }
+// 入力フォーカスを失ったときの処理
+         yen.onblur = function()
+        {
+         if( this.value == '' )
+        {
+          this.value = this.defaultValue;
+          this.style.color = 'gray';
+        }
+  }
+  // 透かし文字をdefaultValueプロパティで保持する
+        yen.defaultValue = yen.value;
+        yen.value = '';
+
+        yen.onblur();
+</script>        
+</body>
+</html>

@@ -1,0 +1,59 @@
+h2{
+color:pink;
+}
+
+p{
+font-size:15px;
+text-align: center;
+width:90px;
+padding:2px;
+margin:5px;
+border-style: outset;
+background-color: #F2F2F2;
+}
+
+input#yen {
+height:30px;
+border-style:double;
+}
+
+input#doller {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+
+input#euro {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+input#pond {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+
+input#fran {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+
+input#audoller {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+
+input#newdoller {
+height:30px;
+border-style:double;
+background-color: #FFFFFF;
+}
+
+input#button {
+text-align: center;
+width:50px;
+
+}
